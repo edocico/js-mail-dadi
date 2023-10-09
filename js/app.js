@@ -74,11 +74,26 @@ sendButtonDOMElement.addEventListener('click', function() {
     } else {
         pDOMElement.innerHTML = 'accesso negato'
     }
-
+    // se accesso assume il valore true allora tramite un event do il via al gioco 
     if (accesso === true) {
         playBtnDOMElement.addEventListener('click', function() {
+            // genero due numeri casuali tra 1 e 6 , uno per l'utente uno per la cpu
+            const userGenNumber = Math.floor(Math.random() * 6) + 1
+            console.log(userGenNumber)
+
+            const cpuGenNumber = Math.floor(Math.random() * 6) + 1
+            console.log(cpuGenNumber)
+            // confronto i due numeri e vedo chi ha il più alto , in base a questo decido chi ha vinto
+            if (userGenNumber > cpuGenNumber) {
+                console.log('hai vinto')
+            } else {
+                console.log('hai perso')
+            }
 
         })
+    } else {
+        alert('immetti un email valida')
+        window.location.reload()  
     }
          
 })
