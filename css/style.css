@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    padding: 20px 30px;
+}
+
+.c-red {
+    color: red;
+}
+
+.play-dadi {
+    padding: 50px 30px;
+}
