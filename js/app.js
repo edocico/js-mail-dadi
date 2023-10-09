@@ -14,6 +14,8 @@ const pDOMElement = document.getElementById('access-p')
 
 const playBtnDOMElement = document.getElementById('play-button')
 
+const resultDOMElement = document.getElementById('result-p')
+
 // creo un array di email
 
 const emailArray = [
@@ -86,8 +88,10 @@ sendButtonDOMElement.addEventListener('click', function() {
             // confronto i due numeri e vedo chi ha il più alto , in base a questo decido chi ha vinto
             if (userGenNumber > cpuGenNumber) {
                 console.log('hai vinto')
+                resultDOMElement.innerHTML = 'Hai vinto!'
             } else {
                 console.log('hai perso')
+                resultDOMElement.innerHTML = 'Hai perso!'
             }
 
         })
